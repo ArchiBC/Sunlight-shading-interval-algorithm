@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace IntervalLib;
 
-public class IntervalArray<T> : IEnumerable<Interval<T>> where T : INumber<T>
+public class IntervalArray<T> : IEnumerable<Interval<T>> where T : struct, INumber<T>
 {
     private readonly IEnumerable<T> _list;
     private readonly IEnumerable<bool> _contains;
